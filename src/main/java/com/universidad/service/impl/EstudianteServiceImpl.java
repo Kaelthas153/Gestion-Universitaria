@@ -45,7 +45,7 @@ public class EstudianteServiceImpl implements IEstudianteService {
     }
 
     @Override
-    public EstudianteDTO actualizarEstudiante(Long id, EstudianteDTO estudianteDTO) { // Implementación del método de actualización
+    public EstudianteDTO actualizarEstudiante(Long id, EstudianteDTO estudianteDTO) { // Implementación del metodo de actualización
         Estudiante estudianteExistente = estudianteRepository.findById(id);
         if (estudianteExistente == null) {
             return null;

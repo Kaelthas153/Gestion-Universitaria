@@ -37,14 +37,14 @@ public class EstudianteController {
         EstudianteDTO estudianteActualizado = estudianteService.actualizarEstudiante(id, estudianteDTO);
         return (estudianteActualizado != null) ? ResponseEntity.ok(estudianteActualizado) : ResponseEntity.notFound().build();
     }
-    @PostMapping("/estudiantes")
+    @PostMapping("/estudiantes") // Nuevo endpoint para insertar un estudiante
     public ResponseEntity<EstudianteDTO> registrarEstudiante(@RequestBody EstudianteDTO estudianteDTO) {
         EstudianteDTO nuevoEstudiante = estudianteService.registrarEstudiante(estudianteDTO);
-        return ResponseEntity.status(201).body(nuevoEstudiante); // HTTP 201 Created
+        return ResponseEntity.status(201).body(nuevoEstudiante);
     }
-    @DeleteMapping("/estudiantes/{id}")
+    @DeleteMapping("/estudiantes/{id}") // Nuevo endpoint para borrar un estudiante
     public ResponseEntity<Void> eliminarEstudiante(@PathVariable Long id) {
         estudianteService.eliminarEstudiante(id);
-        return ResponseEntity.noContent().build(); // HTTP 204 No Content
+        return ResponseEntity.noContent().build();
     }
 }

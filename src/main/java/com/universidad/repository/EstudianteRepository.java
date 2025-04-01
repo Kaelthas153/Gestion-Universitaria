@@ -28,14 +28,14 @@ public class EstudianteRepository {
         return new ArrayList<>(estudiantes.values());
     }
 
-    public Estudiante findById(Long id) { // Nuevo método para obtener un estudiante por su ID
+    public Estudiante findById(Long id) { // Nuevo metodo para obtener un estudiante por su ID
         return estudiantes.get(id);
     }
 
-    public void deleteById(Long id) {
+    public void deleteById(Long id) { // Nuevo metodo para borrar un estudiante por su ID
         estudiantes.remove(id);
     }
-    public boolean existsById(Long id) {
+    public boolean existsById(Long id) { // Nuevo metodo para verificar la existencia de un estudiante por su ID
         return estudiantes.containsKey(id);
     }
 
